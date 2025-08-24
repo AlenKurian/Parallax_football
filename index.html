@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <nav class="sticky top-0 left-0 right-0 z-50 bg-black bg-opacity-20 backdrop-blur-sm">
+        <div class="container mx-auto px-9 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-white text-3xl font-bold uppercase text-decoration-none">Legends in Motion</a>
+                <div class="hidden md:flex space-x-10">
+                    <a href="#home"
+                        class="text-white hover:text-amber-400 transition text-decoration-none text-lg font-bold border rounded-5 px-3 py-1">Home</a>
+                    <a href="#honors"
+                        class="text-white hover:text-amber-400 transition text-decoration-none text-lg font-bold border rounded-5 px-3 py-1">Gallery</a>
+                    <a href="#about"
+                        class="text-white hover:text-amber-400 transition text-decoration-none text-lg font-bold border rounded-5 px-3 py-1">About</a>
+                    <a href="#contact"
+                        class="text-white hover:text-amber-400 transition text-decoration-none text-lg font-bold border rounded-5 px-3 py-1">Contact</a>
+                </div>
+                <button class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- content -->
+    <section id="home">
+        <header class="parallax"
+            style="background-image: url('https://i.pinimg.com/736x/73/47/68/734768f89941a4fbe35d77d0ffbe4ea6.jpg');">
+            <div class="overlay container">
+                <p
+                    class="display-6 fw-bold transition duration-500 ease-in-out hover:text-blue-300 drop-shadow-[0_0_5px_#00ff00]">
+                    Explore the world of Football Legends </p>
+                <p class="text-lg font-bold">Scroll to Discover players, stats, and stories <br> from the beautiful
+                    game.</p>
+                <a href="#players" class="btn btn-outline-light mt-3 animate-bounce">Explore Players</a>
+            </div>
+        </header>
+    </section>
+
+    <!-- Players Section -->
+    <section id="players" class="py-5 bg-black">
+        <div class="container">
+            <h2 class="text-center text-white fw-bold mb-5">Star Players</h2>
+            <div class="row g-4">
+                <!-- Player Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark text-white shadow-lg h-80">
+                        <img src="https://i.pinimg.com/736x/e9/12/b0/e912b06de2d3baa13ac6dec916c2f0c8.jpg"
+                            class="card-img-top transition-transform duration-900 hover:scale-x-[-1]" alt="Messi">
+                        <div class="card-body">
+                            <h5 class="card-title">Lionel Messi</h5>
+                            <p class="card-text">Forward • Inter Miami CF • Argentina</p>
+                            <ul class="list-unstyled small text-secondary">
+                                <li>8x Ballon d'Or</li>
+                                <li>2022 World Cup</li>
+                                <li>4x UCL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for more players -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark text-white shadow-lg h-80">
+                        <div class="card-body">
+                            <h5 class="card-title">Cristiano Ronaldo</h5>
+                            <p class="card-text">Forward • Al Nassr • Portugal</p>
+                            <ul class="list-unstyled small text-secondary">
+                                <li>5x Ballon d'Or</li>
+                                <li>Euro 2016</li>
+                                <li>5x UCL</li>
+                            </ul>
+                        </div>
+                        <img src="https://i.pinimg.com/1200x/2f/4f/e6/2f4fe642fd209bdd0177a948535e9bec.jpg"
+                            class="card-img-top transition-transform duration-900 hover:scale-x-[-1]" alt="Ronaldo">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark text-white shadow-lg h-80">
+                        <img src="https://i.pinimg.com/736x/e8/a8/2f/e8a82f78272b3d1235459cef8d76c027.jpg"
+                            class="card-img-top transition-transform duration-900 hover:scale-x-[-1]" alt="Mbappe">
+                        <div class="card-body">
+                            <h5 class="card-title">Neymar JR</h5>
+                            <p class="card-text">Forward • Al Hilal • Brazil</p>
+                            <ul class="list-unstyled small text-secondary">
+                                <li>3x French Cup winner</li>
+                                <li>30 major Trophies</li>
+                                <li>Olymbic Gold Medal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Honors -->
+    <section id="honors" class="parallax"
+        style="background-image: url('https://i.pinimg.com/1200x/47/2b/33/472b336542a74e94c561b38392bd6f0e.jpg');">
+        <div class="container">
+            <div class="grid grid-cols-3 gap-3">
+                <img src="https://wallpapers.com/images/hd/neymar-ultra-hd-bbzfqf0uj5v4m5ny.jpg"
+                    class="rounded-lg transform transition duration-300 hover:scale-105">
+                <img src="https://wallpapercave.com/wp/wp12298307.jpg"
+                    class="h-66 rounded-lg transform transition duration-300 hover:scale-105">
+                <img src="https://w0.peakpx.com/wallpaper/396/881/HD-wallpaper-neymar-jr-goal-brazilian-footballers-striker-psg-fc-ligue-1-black-uniform-football-stars-paris-saint-germain-neymar-neon-lights-soccer.jpg"
+                    class="rounded-lg transform transition duration-300 hover:scale-105">
+                <img src="https://wallpaper.dog/large/20682434.jpg"
+                    class="rounded-lg transform transition duration-300 hover:scale-105">
+                <img src="https://avatars.mds.yandex.net/i?id=276cb4aad3b03ab3cff30cf2eaccb037bebbd4ba-7760813-images-thumbs&n=13"
+                    class="h-66 rounded-lg transform transition duration-300 hover:scale-105">
+                <img src="https://i.pinimg.com/originals/22/a6/6e/22a66ef9fc1067375df29ee4fd04954b.jpg"
+                    class="rounded-lg transform transition duration-300 hover:scale-105">
+                <img src="https://i0.wp.com/barcablog.com/wp-content/uploads/2020/05/lionel-messi-barcelona-barca-2020.png?resize=710%2C444"
+                    class="rounded-lg transform transition duration-300 hover:scale-105">
+                <img src="https://wallpapercave.com/wp/wp2544764.jpg"
+                    class="h-66 rounded-lg transform transition duration-300 hover:scale-105">
+                <img src="https://c4.wallpaperflare.com/wallpaper/446/920/878/soccer-lionel-messi-fc-barcelona-wallpaper-preview.jpg"
+                    class="rounded-lg transform transition duration-300 hover:scale-105">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="py-5 bg-black">
+        <h2 class="text-center text-white fw-bold mb-5">About</h2>
+        <div class="d-flex px-35">
+            <img class="-mt-5 rounded-lg animate-[bounce_2s_infinite]" src="./img/f_logo.webp" alt="" width="100px">
+            <img class="-mt-5 rounded-lg animate-[bounce_2s_infinite] [animation-delay:1s]" src="./img/f_logo.webp" alt="" width="100px">
+            <p class="text-white text-center ml-5 mr-5">“This website is dedicated to three footballing icons who defined an era — Lionel Messi, Cristiano
+                Ronaldo, and Neymar Jr. Each has left an unforgettable mark on the game: Messi with his genius
+                playmaking and records, Ronaldo with his unmatched power and consistency, and Neymar with his flair and
+                creativity. Together, they represent the magic, passion, and greatness of modern football.”
+            </p>
+            <img class="-mt-5 rounded-lg animate-[bounce_2s_infinite]" src="./img/f_logo.webp" alt="" width="100px">
+            <img class="-mt-5 rounded-lg animate-[bounce_2s_infinite] [animation-delay:1s]" src="./img/f_logo.webp" alt="" width="100px">        </div>
+    </section>
+
+
+    <!-- Parallax Honors -->
+    <section id="honors" class="parallax"
+        style="background-image: url('https://i.pinimg.com/1200x/65/48/5f/65485fe6ab9c4d85ad25fbaaae140688.jpg');">
+        <div>
+            <p class="text-9xl font-bold text-white transition drop-shadow-[0_0_8px_#00ff00]">ThankYou</p>
+        </div>
+    </section>
+
+</body>
+
+</html>
